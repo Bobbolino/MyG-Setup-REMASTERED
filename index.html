@@ -3,93 +3,128 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MyG-setup Remastered – min personliga gamingsetup, datorkomponenter, kringutrustning och ett bildgalleri. Övervakad av gamingankan Kalle."
+    />
+    <meta name="theme-color" content="#0b0d12" />
     <title>MyG-setup | Remastered</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+    <!-- Navigeringsmeny -->
     <header>
-      <nav>
+      <nav aria-label="Huvudmeny">
         <a class="logo" href="#home">MyG<span>.</span></a>
-
         <ul>
           <li><a href="#home">Hem</a></li>
           <li><a href="#computer">Datorn</a></li>
           <li><a href="#peripherals">Utrustning</a></li>
-          <li><a href="#gallery">Galleri</a></li>
+          <li><a href="#gallery">Showcase</a></li>
+          <li><a href="#mascot">Kalle?</a></li>
           <li><a href="#about">Om mig</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
+      <!-- Startsida -->
       <section id="home" class="hero">
         <p class="subtitle">MIN PERSONLIGA GAMINGSETUP</p>
         <h1>MyG-setup<span>.</span></h1>
-        <h2>Remastered Edition</h2>
+        <p class="hero-edition">Remastered Edition</p>
         <p>En passion för gaming, hårdvara och teknik.</p>
         <a class="btn" href="#computer">Utforska min setup</a>
       </section>
 
+      <!-- Datorkomponenter -->
       <section id="computer">
         <div class="section-heading">
           <p class="subtitle">HÅRDVARA</p>
           <h2>Min gamingdator</h2>
           <p>Hjärtat i min gamingsetup.</p>
         </div>
-
         <div class="product-grid">
           <article class="product-card">
-            <img src="images/cpu.png" alt="AMD Ryzen 7 7800X3D" />
+            <img
+              src="images/cpu.png"
+              alt="AMD Ryzen 7 7800X3D"
+              loading="lazy"
+            />
             <p class="category">Processor</p>
             <h3>AMD Ryzen 7 7800X3D</h3>
             <p>8 kärnor, 16 trådar och 3D V-Cache.</p>
           </article>
 
           <article class="product-card">
-            <img src="images/gpu.png" alt="NVIDIA RTX 4070 Super" />
+            <img
+              src="images/gpu.png"
+              alt="NVIDIA RTX 4070 Super"
+              loading="lazy"
+            />
             <p class="category">Grafikkort</p>
             <h3>NVIDIA GeForce RTX 4070 Super</h3>
             <p>12 GB GDDR6X grafikminne.</p>
           </article>
 
           <article class="product-card">
-            <img src="images/motherboard.png" alt="ASUS TUF B650" />
+            <img
+              src="images/motherboard.png"
+              alt="ASUS TUF Gaming B650-Plus WiFi"
+              loading="lazy"
+            />
             <p class="category">Moderkort</p>
             <h3>ASUS TUF Gaming B650-Plus WiFi</h3>
             <p>AM5-plattform med stöd för DDR5.</p>
           </article>
 
           <article class="product-card">
-            <img src="images/ram.png" alt="DDR5 RAM" />
+            <img
+              src="images/ram.png"
+              alt="Corsair Vengeance DDR5"
+              loading="lazy"
+            />
             <p class="category">RAM-minne</p>
-            <h3>Corsair 6000MHz CL36 Vengeance</h3>
-            <p>32GB DDR5 (2x16GB)</p>
+            <h3>Corsair Vengeance 6000 MT/s CL36</h3>
+            <p>32 GB DDR5 (2 × 16 GB).</p>
           </article>
 
           <article class="product-card">
-            <img src="images/ssd.png" alt="Kingston NV3" />
+            <img src="images/ssd.png" alt="Kingston NV3" loading="lazy" />
             <p class="category">Lagring</p>
-            <h3>Kingston NV3 1TB</h3>
+            <h3>Kingston NV3 1 TB</h3>
             <p>M.2 NVMe PCIe 4.0 SSD.</p>
           </article>
 
           <article class="product-card">
-            <img src="images/cooler.png" alt="Arctic Liquid Freezer" />
+            <img
+              src="images/cooler.png"
+              alt="Arctic Liquid Freezer III Pro 360 A-RGB"
+              loading="lazy"
+            />
             <p class="category">Processorkylning</p>
             <h3>Arctic Liquid Freezer III Pro 360 A-RGB</h3>
             <p>360 mm vattenkylning med A-RGB.</p>
           </article>
 
           <article class="product-card">
-            <img src="images/case.png" alt="Fractal Design North XL" />
+            <img
+              src="images/case.png"
+              alt="Fractal Design North XL"
+              loading="lazy"
+            />
             <p class="category">Chassi</p>
             <h3>Fractal Design North XL TG</h3>
             <p>Stilren design med trädetaljer.</p>
           </article>
 
           <article class="product-card">
-            <img src="images/fans.png" alt="Arctic P14 Pro" />
+            <img
+              src="images/fans.png"
+              alt="Arctic P14 Pro A-RGB"
+              loading="lazy"
+            />
             <p class="category">Chassifläktar</p>
             <h3>Arctic P14 Pro A-RGB</h3>
             <p>4 st 140 mm fläktar.</p>
@@ -97,44 +132,64 @@
         </div>
       </section>
 
+      <!-- Kringutrustning -->
       <section id="peripherals">
         <div class="section-heading">
           <p class="subtitle">UTRUSTNING</p>
           <h2>Min kringutrustning</h2>
           <p>Utrustningen som kompletterar min gamingdator.</p>
         </div>
-
         <div class="product-grid">
           <article class="product-card">
-            <img src="images/keyboard.png" alt="SteelSeries Apex Pro" />
+            <img
+              src="images/keyboard.png"
+              alt="SteelSeries Apex Pro"
+              loading="lazy"
+            />
             <p class="category">Tangentbord</p>
             <h3>SteelSeries Apex Pro</h3>
             <p>Mekaniskt tangentbord med justerbara brytare.</p>
           </article>
 
           <article class="product-card">
-            <img src="images/mouse.png" alt="SteelSeries Aerox 5 Wireless" />
+            <img
+              src="images/mouse.png"
+              alt="SteelSeries Aerox 5 Wireless"
+              loading="lazy"
+            />
             <p class="category">Mus</p>
             <h3>SteelSeries Aerox 5 Wireless</h3>
-            <p>Lättviktig trådlös gamingmus.</p>
+            <p>Lätt trådlös gamingmus.</p>
           </article>
 
           <article class="product-card">
-            <img src="images/headset.png" alt="Arctis Nova Pro Wireless" />
+            <img
+              src="images/headset.png"
+              alt="SteelSeries Arctis Nova Pro Wireless"
+              loading="lazy"
+            />
             <p class="category">Headset</p>
             <h3>SteelSeries Arctis Nova Pro Wireless</h3>
             <p>Trådlöst ljud med utbytbara batterier.</p>
           </article>
 
           <article class="product-card">
-            <img src="images/microphone.png" alt="SteelSeries Alias" />
+            <img
+              src="images/microphone.png"
+              alt="SteelSeries Alias"
+              loading="lazy"
+            />
             <p class="category">Mikrofon</p>
             <h3>SteelSeries Alias</h3>
             <p>Extern USB-mikrofon för tydlig kommunikation.</p>
           </article>
 
           <article class="product-card">
-            <img src="images/monitor.png" alt="LG 27GS75Q" />
+            <img
+              src="images/monitor.png"
+              alt="LG UltraGear 27GS75Q"
+              loading="lazy"
+            />
             <p class="category">Bildskärm</p>
             <h3>LG UltraGear 27GS75Q</h3>
             <p>27 tum, QHD och upp till 200 Hz.</p>
@@ -142,89 +197,218 @@
         </div>
       </section>
 
+      <!-- Showcase -->
       <section id="gallery">
         <div class="section-heading">
-          <p class="subtitle">BILDGALLERI</p>
-          <h2>Min setup i bilder</h2>
+          <p class="subtitle">SHOWCASE</p>
+          <h2>Min setup i fokus</h2>
           <p>En närmare titt på min gaminghörna.</p>
         </div>
-
         <div class="gallery-grid">
           <figure class="gallery-card">
             <img
               src="images/setup.jpg"
-              alt="Min kompletta gamingsetup"
+              alt="Min kompletta gamingsetup med blå RGB-belysning"
               loading="lazy"
             />
-            <figcaption>Min kompletta setup</figcaption>
+            <figcaption>Min gamingstation</figcaption>
           </figure>
-
           <figure class="gallery-card">
-            <img src="images/pc.jpg" alt="Min gamingdator" loading="lazy" />
-            <figcaption>Gamingdatorn</figcaption>
+            <img
+              src="images/pc.jpg"
+              alt="Fractal North XL med blå RGB-belysning"
+              loading="lazy"
+            />
+            <figcaption>Design möter prestanda</figcaption>
           </figure>
-
           <figure class="gallery-card">
             <img
               src="images/desk.jpg"
-              alt="Mitt skrivbord och kringutrustning"
+              alt="Mitt skrivbord och min kringutrustning"
               loading="lazy"
             />
-            <figcaption>Skrivbordet</figcaption>
+            <figcaption>Där allt händer</figcaption>
           </figure>
         </div>
       </section>
 
+      <!-- Gamingankan -->
+      <section id="mascot">
+        <div class="section-heading">
+          <h2>Möt systemadministratören Kalle</h2>
+          <p>Ingen gamingsetup är komplett utan kompetent ledning.</p>
+        </div>
+        <div class="mascot-card">
+          <div class="mascot-image">
+            <img
+              src="images/duck.jpg"
+              alt="Gamingankan Kalle framför datorn"
+              loading="lazy"
+            />
+          </div>
+          <div class="mascot-info">
+            <span class="status">● I TJÄNST</span>
+            <h3>Chief Gaming Officer</h3>
+            <p class="mascot-description">
+              Ansvarar för systemövervakning, kvalitetssäkring och utvecklarens
+              psykiska stabilitet och mentala välbefinnande.
+            </p>
+            <dl class="mascot-specs">
+              <div class="spec-row">
+                <dt>Modell</dt>
+                <dd>Anka</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>Processor</dt>
+                <dd>AMD Ryzen 7 7800QUACK</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>RAM-minne</dt>
+                <dd>32 QuackBytes BBREAD</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>Kylning</dt>
+                <dd>Passiv</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>Strömförbrukning</dt>
+                <dd>0 W</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>Koffeinbehov</dt>
+                <dd>Obegränsat</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>Drifttid</dt>
+                <dd>24/7</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>Befattningsklass</dt>
+                <dd>KONFIDENTIELL</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>Antal godkända npm-paket i VS Code</dt>
+                <dd>0</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>Operativsystem</dt>
+                <dd>QuackOS 11 Pro</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>Lagring</dt>
+                <dd>2 TB Solid State Duck</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>Nätverksanslutning</dt>
+                <dd>Wi-Fjäder 7</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>Behörighetsnivå</dt>
+                <dd>Högre än utvecklarens</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>Lönenivå</dt>
+                <dd>189 brödsmulor/h + OB</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>Kollektivavtal</dt>
+                <dd>Svenska Ankförbundet</dd>
+              </div>
+
+              <div class="spec-row">
+                <dt>Incidenter med OneDrive</dt>
+                <dd>SEKRETESSBELAGT</dd>
+              </div>
+            </dl>
+            <figure class="mascot-quote">
+              <blockquote>
+                <p>
+                  ”Efter en intern säkerhetsgranskning har beslut fattats om att
+                  neka React, Node.js, npm och OneDrive tillträde till
+                  verksamheten. Även :root omfattas av tillträdesförbudet.
+                  Beslutet kan ej överklagas.”
+                </p>
+              </blockquote>
+              <figcaption>– Kalle, Chief Gaming Officer</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Om mig -->
       <section id="about">
         <div class="section-heading">
           <p class="subtitle">BAKOM PROJEKTET</p>
           <h2>Om mig</h2>
         </div>
-
         <div class="about-card">
           <h3>Gaming, teknik och utveckling.</h3>
-
           <p>
-            Jag är en teknikintresserad person med ett stort intresse för
-            gaming, datorer och webbutveckling.
+            Jag har ett orimligt stort intresse för gaming, datorer och
+            webbutveckling. Mitt intresse för hårdvara har sedan länge passerat
+            gränsen för vad som kan betraktas som ekonomiskt försvarbart.
           </p>
-
           <p>
-            MyG-setup började som ett enkelt projekt där jag ville lära mig mer
-            om HTML och CSS genom att presentera min egen gamingutrustning.
+            MyG-setup började som ett oskyldigt försök att lära mig HTML och CSS
+            genom att presentera min gamingutrustning. Projektet innehöll
+            tveksamma designbeslut, försvunna CSS-enheter och en sidfot vars
+            placering än idag är föremål för internutredning.
           </p>
-
           <p>
             Den här versionen är en moderniserad upplaga av originalprojektet,
-            med förbättrad design, uppdaterad utrustning och responsiv layout.
+            med förbättrad design, uppdaterad hårdvara och responsiv layout.
+            Utvecklingen har genomförts utan React, npm eller andra tekniska
+            komplikationer som riskerar att orsaka akut blodtrycksförhöjning.
+          </p>
+
+          <p>
+            Projektet står numera under strikt tillsyn av en
+            kollektivavtalsansluten anka vid namn Kalle, som har fullständig
+            beslutanderätt över verksamheten. Jag har i praktiken reducerats
+            till underhållstekniker med administrativ behörighet under särskilda
+            omständigheter.
           </p>
         </div>
       </section>
 
+      <!-- Originalprojektet -->
       <section id="legacy">
         <div class="legacy-card">
           <p class="subtitle">DÄR ALLT BÖRJADE</p>
-
           <h2>MyG-setup: Legacy Edition</h2>
-
           <p>
             Innan Remastered fanns originalet. Ett av mina tidigare projekt inom
             webbutveckling och början på MyG-setup.
           </p>
-
           <a
             class="btn"
-            href="https://github.com/Bobbolino/MyG-setup.git"
+            href="https://github.com/Bobbolino/MyG-setup"
             target="_blank"
+            rel="noopener noreferrer"
+            >Besök originalprojektet</a
           >
-            Besök originalprojektet
-          </a>
         </div>
       </section>
     </main>
 
+    <!-- Sidfot (lagligt placerad) -->
     <footer>
       <p>&copy; 2026 MyG-setup | Remastered Edition</p>
+      <p class="footer-note">Byggd med HTML, CSS och övervakad av en anka.</p>
     </footer>
   </body>
 </html>

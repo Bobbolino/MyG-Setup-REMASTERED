@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 86px;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
   color: #f1f5f9;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 a {
@@ -28,7 +30,12 @@ ul {
 
 section {
   padding: 80px 8%;
-  scroll-margin-top: 120px;
+}
+
+a:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 5px;
+  border-radius: 4px;
 }
 
 /* Navigeringsmeny */
@@ -55,7 +62,8 @@ nav {
   font-weight: bold;
 }
 
-.logo span {
+.logo span,
+.hero h1 span {
   color: #8b5cf6;
 }
 
@@ -71,7 +79,7 @@ nav ul a {
 }
 
 nav ul a:hover {
-  color: #8b5cf6;
+  color: #a78bfa;
 }
 
 /* Startsida */
@@ -86,40 +94,34 @@ nav ul a:hover {
   background: radial-gradient(ellipse at top right, #211638, #0b0d12 70%);
 }
 
-.subtitle {
-  color: #8b5cf6;
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 3px;
-}
-
 .hero h1 {
   font-size: clamp(42px, 7vw, 80px);
   line-height: 1.1;
-}
-
-.hero h1 span {
-  color: #8b5cf6;
-}
-
-.hero h2 {
-  font-size: 30px;
-  color: #94a3b8;
+  overflow-wrap: anywhere;
 }
 
 .hero p {
   color: #94a3b8;
 }
 
+.hero .hero-edition {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.subtitle,
 .hero .subtitle {
-  color: #8b5cf6;
+  color: #a78bfa;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 
 /* Knappar */
 
 .btn {
   display: inline-block;
-  background-color: #8b5cf6;
+  background-color: #7c3aed;
   color: white;
   padding: 12px 25px;
   border-radius: 8px;
@@ -128,7 +130,7 @@ nav ul a:hover {
 }
 
 .btn:hover {
-  background-color: #7c3aed;
+  background-color: #6d28d9;
 }
 
 /* Sektionsrubriker */
@@ -142,7 +144,7 @@ nav ul a:hover {
   margin: 10px 0;
 }
 
-.section-heading > p:last-child {
+.section-heading > p:last-child:not(.subtitle) {
   color: #94a3b8;
 }
 
@@ -155,23 +157,27 @@ nav ul a:hover {
 }
 
 .product-card {
+  min-width: 0;
   background-color: #151922;
   border: 1px solid #252b36;
   border-radius: 16px;
   padding: 25px;
+  overflow-wrap: anywhere;
   transition:
     transform 0.3s,
     border-color 0.3s,
     box-shadow 0.3s;
 }
 
-.product-card:hover {
+.product-card:hover,
+.gallery-card:hover {
   transform: translateY(-6px);
   border-color: #8b5cf6;
   box-shadow: 0 10px 30px rgba(139, 92, 246, 0.15);
 }
 
 .product-card img {
+  display: block;
   width: 100%;
   height: 180px;
   object-fit: contain;
@@ -179,7 +185,7 @@ nav ul a:hover {
 }
 
 .product-card .category {
-  color: #8b5cf6;
+  color: #a78bfa;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
@@ -199,11 +205,9 @@ nav ul a:hover {
 
 /* Sektionsbakgrunder */
 
-#computer {
-  background-color: #0b0d12;
-}
-
-#peripherals {
+#peripherals,
+#mascot,
+#legacy {
   background-color: #10131a;
 }
 
@@ -211,7 +215,7 @@ nav ul a:hover {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
 }
 
@@ -222,19 +226,20 @@ nav ul a:hover {
   overflow: hidden;
   transition:
     transform 0.3s,
-    border-color 0.3s;
-}
-
-.gallery-card:hover {
-  transform: translateY(-6px);
-  border-color: #8b5cf6;
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
 
 .gallery-card img {
   width: 100%;
-  height: 280px;
+  height: 550px;
   object-fit: cover;
+  object-position: center;
   display: block;
+}
+
+.gallery-card:nth-child(3) img {
+  object-position: center bottom;
 }
 
 .gallery-card figcaption {
@@ -243,11 +248,113 @@ nav ul a:hover {
   text-align: center;
 }
 
-/* Om mig */
+/* Gamingankan */
 
-#about {
-  background-color: #10131a;
+.mascot-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  background-color: #151922;
+  border: 1px solid #252b36;
+  border-radius: 20px;
+  overflow: hidden;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
+
+.mascot-card:hover {
+  border-color: #8b5cf6;
+  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.15);
+}
+
+.mascot-image {
+  position: relative;
+  overflow: hidden;
+  min-height: 350px;
+}
+
+.mascot-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.mascot-card:hover img {
+  transform: scale(1.05);
+}
+
+.mascot-info {
+  padding: 40px;
+  min-width: 0;
+}
+
+.status {
+  display: inline-block;
+  color: #22c55e;
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.mascot-info h3 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.mascot-description {
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid #252b36;
+  font-size: 14px;
+}
+
+.spec-row dt,
+.spec-row dd {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.spec-row dt {
+  color: #94a3b8;
+}
+
+.spec-row dd {
+  text-align: right;
+  font-weight: bold;
+}
+
+.mascot-quote {
+  margin-top: 25px;
+  padding: 15px;
+  border-left: 3px solid #8b5cf6;
+  background-color: #10131a;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.mascot-quote figcaption {
+  margin-top: 15px;
+}
+
+/* Om mig */
 
 .about-card {
   background-color: #151922;
@@ -293,7 +400,7 @@ nav ul a:hover {
 }
 
 .legacy-card .subtitle {
-  color: #8b5cf6;
+  color: #a78bfa;
 }
 
 /* Sidfot */
@@ -307,9 +414,36 @@ footer {
   font-size: 14px;
 }
 
+.footer-note {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* Anpassning för surfplattor */
+
+@media (max-width: 1000px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-card img {
+    height: 320px;
+  }
+
+  .mascot-info {
+    padding: 25px;
+  }
+}
+
 /* Mobilanpassning */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 130px;
+  }
+
   nav {
     flex-direction: column;
     padding: 15px 5%;
@@ -327,7 +461,6 @@ footer {
 
   section {
     padding: 50px 5%;
-    scroll-margin-top: 150px;
   }
 
   .hero {
@@ -336,10 +469,9 @@ footer {
 
   .hero h1 {
     font-size: 42px;
-    overflow-wrap: anywhere;
   }
 
-  .hero h2 {
+  .hero .hero-edition {
     font-size: 24px;
   }
 
@@ -348,15 +480,101 @@ footer {
   }
 
   .product-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 
   .product-card {
     padding: 20px;
   }
 
+  .gallery-grid,
+  .mascot-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gallery-card img {
+    height: 350px;
+  }
+
+  .mascot-image {
+    height: 450px;
+  }
+
+  .mascot-info {
+    padding: 25px;
+  }
+
+  .mascot-info h3 {
+    font-size: 26px;
+  }
+
+  .about-card {
+    padding: 25px;
+  }
+
+  .legacy-card h2 {
+    font-size: 26px;
+  }
+
   footer {
     padding: 25px 5%;
     font-size: 12px;
+  }
+}
+
+/* Mindre mobiltelefoner */
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .subtitle,
+  .hero .subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .gallery-card img {
+    height: 300px;
+  }
+
+  .mascot-image {
+    height: 350px;
+  }
+
+  .spec-row {
+    font-size: 12px;
+    gap: 10px;
+  }
+}
+
+/* Extra scrollutrymme när mobilmenyn bryts på två rader */
+
+@media (max-width: 405px) {
+  html {
+    scroll-padding-top: 155px;
+  }
+}
+
+/* Tillgänglighet: mindre rörelse */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none;
+  }
+
+  .product-card:hover,
+  .gallery-card:hover,
+  .mascot-card:hover img {
+    transform: none;
   }
 }
