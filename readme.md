@@ -27,7 +27,7 @@ design, responsivitet och enkelhet.
 Öppna index.html i valfri webbläsare.
 Alternativt kan Live Server i Visual Studio Code användas.
 
-Inga installationer eller externa beroenden krävs.
+Inga installationer eller extraverktyg krävs.
 
 ## Originalprojektet
 
