@@ -56,4 +56,4 @@ Bobbolino – underhållstekniker på uppdrag av Kalle.
 
 ---
 
-Byggd med HTML, CSS
+Byggd med HTML och CSS
